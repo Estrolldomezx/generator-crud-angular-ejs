@@ -1,10 +1,5 @@
----
-to: src/app/pages/<%= h.changeCase.paramCase(name) %>/<%= h.changeCase.paramCase(name) %>.module.ts
-unless_exists: true
----
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -37,13 +32,14 @@ import { RatingModule } from 'primeng/rating';
 import { SliderModule } from 'primeng/slider';
 import { ToastModule } from 'primeng/toast';
 import { ToolbarModule } from 'primeng/toolbar';
-import { <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Component } from './<%= h.changeCase.paramCase(name) %>.component';
-import { <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>FormComponent } from './<%= h.changeCase.paramCase(name) %>-form/<%= h.changeCase.paramCase(name) %>-form.component';
+import { DomeComponent } from './dome.component';
+import { DomeFormComponent } from './dome-form/dome-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Component,
-    <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>FormComponent
+    DomeComponent,
+    DomeFormComponent
   ],
   imports: [
     CommonModule,
@@ -82,7 +78,7 @@ import { <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>FormComponent } fr
 		CheckboxModule,
   ],
   exports:[
-    <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Component
+    DomeComponent
   ]
 })
-export class <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Module { }
+export class DomeModule { }

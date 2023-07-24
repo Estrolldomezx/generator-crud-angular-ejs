@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AppLayoutComponent } from './pages/app-layout/app-layout.component';
+import { DomeComponent } from './pages/dome/dome.component';
 // Add new imports
 
 const routes: Routes = [
@@ -15,6 +16,10 @@ const routes: Routes = [
         component: AppComponent,
       },
       // Add new components here
+    {
+        path: 'dome',
+        component: DomeComponent
+    },
     ],
   },
 ];
