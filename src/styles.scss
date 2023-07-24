@@ -52,3 +52,10 @@ $regular: 400;
 $medium: 500;
 $semi-bold: 600;
 $bold: 700;
+
+th {
+  background-color: #006590;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
