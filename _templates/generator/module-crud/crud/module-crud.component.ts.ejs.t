@@ -8,13 +8,6 @@ import { FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ToastrService } from 'ngx-toastr';
-import { alertMessages } from 'src/app/constants/alert.const';
-import { errorMessages } from 'src/app/constants/error.const';
-import { PeriodicElement } from 'src/app/models/common.model';
-import { AuthService } from 'src/app/services/api/auth.service';
-import { DialogService } from 'src/app/services/components/dialog.service';
-import { LoadingService } from 'src/app/services/components/loading.service';
 import { <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>FormService } from './<%= h.changeCase.paramCase(name) %>-form/<%= h.changeCase.paramCase(name) %>-form.service';
 
 @Component({
@@ -26,7 +19,7 @@ export class <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Component impl
 	title = 'ktb-frontend';
 	date = new Date();
 
-	ELEMENT_DATA: PeriodicElement[] = [
+	ELEMENT_DATA: any[] = [
 		{ position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
 		{ position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
 		{ position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
@@ -56,28 +49,21 @@ export class <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Component impl
 		'symbol',
 		'action',
 	];
-	dataSource = new MatTableDataSource<PeriodicElement>(this.ELEMENT_DATA);
+	dataSource = new MatTableDataSource<any>(this.ELEMENT_DATA);
 
 	@ViewChild(MatPaginator) paginator!: MatPaginator;
 	@ViewChild(MatSort) sort!: MatSort;
-
-	errorMessages = errorMessages;
-	alertMessages = alertMessages;
 
 	isLoading: boolean = true;
 	isShowDeleteConfirmDialog: boolean = false;
 	isShowResponsiveFilter: boolean = false;
 	isShowFormDialog: boolean = false;
 	isSubmitted: boolean = false;
-	selected<%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>?: PeriodicElement;
+	selected<%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>?: any;
 	<%= h.changeCase.paramCase(name) %>Form!: FormGroup;
 
   constructor(
 		private _liveAnnouncer: LiveAnnouncer,
-		private toastrService: ToastrService,
-		private dialogService: DialogService,
-		private loadingService: LoadingService,
-		private authService: AuthService,
 		private <%= h.changeCase.paramCase(name) %>FormService: <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>FormService
 	) {
 		this.<%= h.changeCase.paramCase(name) %>Form = this.<%= h.changeCase.paramCase(name) %>FormService.toFormGroup();
@@ -109,25 +95,25 @@ export class <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Component impl
 	}
 
 	openDialogOneButton() {
-		this.dialogService.showOneButtonDialog(
-			'บันทึกข้อมูล',
-			'การบันทึกข้อมูลสำเร็จ',
-			'ตกลง',
-			'small'
-		);
+		// this.dialogService.showOneButtonDialog(
+		//	'บันทึกข้อมูล',
+		//	'การบันทึกข้อมูลสำเร็จ',
+		//	'ตกลง',
+		//	'small'
+		// );
 	}
 
 	openDialogTwoButton() {
-		this.dialogService.showTwoButtonDialog(
-			'ออกจากระบบ',
-			'ยืนยันการออกจากระบบ',
-			'ตกลง',
-			'ยกเลิก',
-			'medium'
-		);
+		// this.dialogService.showTwoButtonDialog(
+		// 	'ออกจากระบบ',
+		//	'ยืนยันการออกจากระบบ',
+		//	'ตกลง',
+		//	'ยกเลิก',
+		//	'medium'
+		// );
 	}
 
-	openFormDialog(data?: PeriodicElement) {
+	openFormDialog(data?: any) {
 		if (data?.name) {
 			// Update
 			this.selected<%= h.changeCase.ucFirst(h.changeCase.camel(name)) %> = data;
@@ -151,7 +137,7 @@ export class <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Component impl
 		//   this.loadingService.hideLoading();
 		// }, 2000);
 
-		this.authService.login({ username: '', password: '' });
+		// this.authService.login({ username: '', password: '' });
 	}
 
 	submitForm() {
@@ -176,13 +162,13 @@ export class <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>Component impl
 
 	openDeleteDialog(name: string) {
 		this.isShowDeleteConfirmDialog = true;
-		this.dialogService.showTwoButtonDialog(
-			'Delete',
-			`ยืนยันการลบ '${name}' ?`,
-			'ตกลง',
-			'ยกเลิก',
-			'medium'
-		);
+		// this.dialogService.showTwoButtonDialog(
+		//	'Delete',
+		//	`ยืนยันการลบ '${name}' ?`,
+		//	'ตกลง',
+		//	'ยกเลิก',
+		//	'medium'
+		// );
 		// TODO: Call service delete
 		// ...
 	}

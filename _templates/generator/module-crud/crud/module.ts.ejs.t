@@ -19,7 +19,6 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { ToastrModule } from 'ngx-toastr';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
 import { CheckboxModule } from 'primeng/checkbox';
@@ -72,7 +71,6 @@ import { <%= h.changeCase.ucFirst(h.changeCase.camel(name)) %>FormComponent } fr
 		MultiSelectModule,
 		ContextMenuModule,
 		DropdownModule,
-		ToastModule,
 		InputTextModule,
 		ProgressBarModule,
 		FileUploadModule,
