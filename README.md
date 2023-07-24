@@ -1,27 +1,30 @@
-# MyApp
+# Generator CRUD angular-ejs
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+Generator is a part of Hygen library, for reuse components.
+- Documentatiom : http://www.hygen.io
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Export a Component of angular includes HTML, SCSS, Typescript.
+- Export other features ex. directive, pipe, model and validator.
+- Add or remove templates for generator.
+- Configuration styles of component themes.
 
-## Code scaffolding
+## Tech
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+uses a number of open source projects to work properly:
 
-## Build
+- [AngularJS] - TypeScript-based single-page web application framework.
+- [PrimeNg] - UI framework for angular.
+- [Bootstrap] - Awesome CSS framework.
+- [Material-UI] - Mateial UI design framework.
+- [PrimeFlex] - Lightweight responsive CSS utility library. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   [PrimeNg]: <https://www.primeng.org>
+   [Bootstrap]: <https://www.getbootstrap.com>
+   [Material-UI]: <https://material.angular.io/>
+   [PrimeFlex]: <https://www.primefaces.org/primeflex/>
+   [AngularJS]: <http://angularjs.org>
+> Enjoy
