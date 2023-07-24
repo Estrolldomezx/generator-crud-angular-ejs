@@ -2,7 +2,7 @@
 to: src/app/pages/<%= h.changeCase.paramCase(name) %>/<%= h.changeCase.paramCase(name) %>.component.html
 unless_exists: true
 ---
-<div class="row d-flex align-items-center justify-content-center">
+<div class="row flex justify-content-center">
 	<div class="col-8">
 		<div class="card">
 			<div class="container">
