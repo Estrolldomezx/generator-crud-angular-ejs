@@ -11,6 +11,45 @@ Generator is a part of Hygen library, for reuse components.
 - Add or remove templates for generator.
 - Configuration styles of component themes.
 
+## Generates
+First step globally with `npm` (or `yarn`):
+```sh
+npm i -g hygen
+hygen init self
+```
+
+> Note: `generator` is required `<name>`.
+
+module-crud:
+
+```sh
+hygen generator module-crud <name>
+```
+
+directive:
+
+```sh
+hygen generator directives <name>
+```
+
+pipe:
+
+```sh
+hygen generator pipes <name>
+```
+
+model:
+
+```sh
+hygen generator models <name>
+```
+
+validator:
+
+```sh
+hygen generator validators <name>
+```
+
 ## Tech
 
 uses a number of open source projects to work properly:
