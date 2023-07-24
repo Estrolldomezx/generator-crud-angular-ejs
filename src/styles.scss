@@ -2,3 +2,53 @@
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
 @import "primeflex/primeflex.css";
+
+//COLOR//
+$white: #ffffff;
+$black: #000000;
+$gray: #d0d0d0;
+$gray-dark: #3b3e45;
+$gray-middle: #9e9e9e;
+$gray-light: #c7c7c7;
+$gray-soft: #eeeeee;
+$red: #f34545;
+$yellow: #ff9700;
+$green: #4cb050;
+$blue-low-light: #f0faff;
+
+//COLOR PALETTE//
+$blue-dark: #006590;
+$blue: #008cdb;
+$blue-middle: #b0dbff;
+$blue-light: #e5f4fd;
+$yellow-light: #ffe9b0;
+
+//SHADOW//
+$shadow-button: 0px 1px 5px rgba(97, 97, 97, 0.18);
+$shadow-dropdown: 2px 4px 15px rgba(0, 7, 69, 0.15);
+$shadow-card: 0px 4px 8px rgba(97, 97, 97, 0.18);
+$shadow-border: 0px 2px 4px rgba(97, 97, 97, 0.18),
+  0px 4px 8px rgba(97, 97, 97, 0.18);
+$shadow-popup: 0px 11px 20px rgba(5, 16, 55, 0.1);
+
+//PAGE SIZE//
+$page-max-width: calc(100vw - 80px);
+$page-width: calc(100vw - 230px);
+$page-min-width: calc(1024px - 230px);
+$page-header-height: 55px;
+$page-sidebar-width: 230px;
+$vertical-table-margin: 20px;
+
+//LEVEL//
+$z-index-modal: 15;
+$z-index-overlay: 14;
+$z-index-sidebar: 13;
+$z-index-tooltip: 12;
+$z-index-page-header: 11;
+$z-index-page-body: 10;
+
+//FONT WEIGHT//
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
