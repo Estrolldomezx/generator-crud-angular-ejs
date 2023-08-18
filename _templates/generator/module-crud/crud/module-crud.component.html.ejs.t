@@ -122,7 +122,6 @@ unless_exists: true
     </div>
   </div>
 </div>
-</div>
 
 <form [formGroup]="<%= h.changeCase.paramCase(name) %>Form" (ngSubmit)="submitForm()">
 	<p-dialog
