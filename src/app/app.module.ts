@@ -7,12 +7,14 @@ import { DomeModule } from './pages/dome/dome.module';
 //COMPONENT//
 import { AppComponent } from './app.component';
 import { AppLayoutComponent } from './pages/app-layout/app-layout.component';
+import { KendoComponent } from './pages/kendo/kendo.component';
 //DIRECTIVE//
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppLayoutComponent
+    AppLayoutComponent,
+    KendoComponent
   ],
   imports: [
     BrowserModule,
